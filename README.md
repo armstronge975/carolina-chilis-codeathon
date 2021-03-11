@@ -2,6 +2,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
 
+## Local Setup
+
+```bash
+git clone https://github.com/armstronge975/clt_hot_pepper_client.git
+cd clt_hot_pepper_client
+
+# Install dependencies and launch server
+npm i
+ng serve
+# Navigate to localhost:4200 in your browser
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
