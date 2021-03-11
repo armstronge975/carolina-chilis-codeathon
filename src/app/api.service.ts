@@ -8,7 +8,7 @@ export class APIService {
 
   constructor(private http: HttpClient) { }
 
-  public getTestData() {
+  getTestData() {
     this.http.get('http://dummy.restapiexample.com/api/v1/employees').subscribe(res => {
       console.log(res)
     })
