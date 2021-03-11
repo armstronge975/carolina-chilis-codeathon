@@ -7,17 +7,15 @@ import { APIService } from './api.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'codeathon-app';
+  title = 'CLT Hot Pepper';
+  apiData = [];
 
   constructor(private api : APIService) {}
 
   ngOnInit() {
     this.api.getTestData().subscribe(res => {
-      // Populate button text using API response
-      let buttons = document.querySelectorAll('.teammate')
-      buttons.forEach((btn, index) => {
-        btn.textContent = res.data[index].employee_name
-      })
+      // To be used for dynamically populating button text
+      this.apiData = res.data;
     })
   }
 }

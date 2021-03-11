@@ -302,7 +302,7 @@
     alt="Angular Logo"
     src="../assets/logo.png"
   />
-  <span>CLT Hot Pepper</span>
+  <span>{{title}}</span>
     <div class="spacer"></div>
 </div>
 
@@ -312,24 +312,8 @@
   <input type="hidden" #selection>
 
   <div class="card-container">
-    <div class="card" (click)="selection.value = 'component'" tabindex="0">
-      <span class="teammate"></span>
-    </div>
-
-    <div class="card" (click)="selection.value = 'material'" tabindex="0">
-      <span class="teammate"></span>
-    </div>
-
-    <div class="card" (click)="selection.value = 'pwa'" tabindex="0">
-      <span class="teammate"></span>
-    </div>
-
-    <div class="card" (click)="selection.value = 'dependency'" tabindex="0">
-      <span class="teammate"></span>
-    </div>
-
-    <div class="card" (click)="selection.value = 'test'" tabindex="0">
-      <span class="teammate"></span>
+    <div class="card" tabindex="0" *ngFor="let btn of apiData.slice(0,9)">
+      <span class="teammate">{{ btn.employee_name }}</span>
     </div>
   </div>
 
